@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-st.title("Critical information nearby me")
+st.title("Critical information")
 query = st.text_input("Enter your query")
 api_key="AIzaSyDEhUWGKuYW8G3JR3CpStnveTqu1gXrBD4"
 cx="f23358939906b4e32"
