@@ -14,7 +14,7 @@ def top_headlines():
     temp=count+1
     country=st.text_input("Which country are you interested in?",key = str(count))
     category=st.text_input("""Which category are you interested in? \nHere are the categories to choose from: 
-                   \nbusiness\nentertainment\ngeneral\nhealth\nscience\ntechnology""" key=str(temp))
+                   \nbusiness\nentertainment\ngeneral\nhealth\nscience\ntechnology""" ,key=str(temp))
     
     top_headlines = newsapi.get_top_headlines(category=category,language='en',country=country)
     top_headlines=json_normalize(top_headlines['articles'])
