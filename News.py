@@ -10,9 +10,10 @@ from datetime import datetime,timedelta
 
 
 def top_headlines():
-    country=st.text_input("Which country are you interested in?",key='country')
+    count=0
+    country=st.text_input("Which country are you interested in?",key = str(count))
     category=st.text_input("""Which category are you interested in? \nHere are the categories to choose from: 
-                   \nbusiness\nentertainment\ngeneral\nhealth\nscience\ntechnology""",key='category')
+                   \nbusiness\nentertainment\ngeneral\nhealth\nscience\ntechnology""")
     
     top_headlines = newsapi.get_top_headlines(category=category,language='en',country=country)
     top_headlines=json_normalize(top_headlines['articles'])
