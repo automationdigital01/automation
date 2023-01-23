@@ -12,7 +12,7 @@ from datetime import datetime,timedelta
 def top_headlines():
     count=1
     temp=count+1
-    country=st.text_input("Which country are you interested in?",key = str(count))
+    country=st.text_input("Which country are you interested in?")
     category=st.text_input("""Which category are you interested in? \nHere are the categories to choose from: 
                    \nbusiness\nentertainment\ngeneral\nhealth\nscience\ntechnology""" ,key=str(temp))
     
@@ -23,7 +23,7 @@ def top_headlines():
     top_headlines
     for (k,v) in dic.items():
            st.write(k+"\n\n"+v)
-           query=st.text_input('enter your query')
+           query=st.text_input('enter your query',key=str(count))
            def date(base):
               date_list=[]
               yr=datetime.today().year
