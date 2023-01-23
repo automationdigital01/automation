@@ -1,6 +1,6 @@
 import streamlit as st
 from newsapi import NewsApiClient
-newsapi = NewsApiClient(api_key='73770f3d51ef4ebbb571859c4ac153c1')
+newsapi = NewsApiClient(api_key='b23f876837f048649e6c10f1b98f226a')
 from pandas.io.json import json_normalize
 import pandas as pd
 import pprint as pp
