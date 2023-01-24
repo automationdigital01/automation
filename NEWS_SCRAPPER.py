@@ -23,8 +23,13 @@ def top_headlines():
                                       from_param=start_date,
                                       to=end_date,
                                       language='en',
-                                      country=country,
                                       sort_by='relevancy')
+    else:
+        news=newsapi.get_top_headlines(category=category,
+                                       country=country,
+                                       from_param=start_date,
+                                       to=end_date,
+                                       )
    
         
     if news["status"] == "ok":
