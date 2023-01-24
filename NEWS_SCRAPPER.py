@@ -20,8 +20,8 @@ def top_headlines():
     keyword = st.text_input("Enter keyword")
     if st.button('Search'):
       
-    else:
-        news= newsapi.get_top_headlines(category=category,
+
+     news= newsapi.get_top_headlines(category=category,
                                        country=country,
                                        from_param=start_date,
                                        to=end_date,
