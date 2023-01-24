@@ -24,7 +24,7 @@ def top_headlines():
                                       to=end_date,
                                       language='en',
                                       sort_by='relevancy',
-                                      page=2)
+                                      )
     else:
         news=newsapi.get_top_headlines(category=category,
                                        country=country,
