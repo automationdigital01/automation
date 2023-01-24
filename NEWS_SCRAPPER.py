@@ -30,7 +30,7 @@ def top_headlines():
                                        
    
         
-    if news["status"] == "ok":
+    
         st.write("Results Found : ", news["totalResults"])
         df = pd.DataFrame(news['articles'])
         st.dataframe(df)
