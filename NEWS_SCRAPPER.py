@@ -29,7 +29,8 @@ def top_headlines():
                                        country=country,
                                        from_param=start_date,
                                        to=end_date,
-                                       )
+                                       language='en')
+                                       
    
         
     if news["status"] == "ok":
