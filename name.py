@@ -12,8 +12,7 @@ def top_headlines():
     category = st.selectbox("Which category are you interested in?", ["business", "entertainment", "general", "health", "science", "technology"])
 
    
-    top_headlines = newsapi.get_top_headlines(
-        category=category, language='en', country=country,page=3)
+    top_headlines = newsapi.get_top_headlines(category=category, language='en', country=country,page=2)
     top_headlines = json_normalize(top_headlines['articles'])
     newdf = top_headlines[["title", "url"]]
     dic = newdf.set_index('title')['url'].to_dict()
