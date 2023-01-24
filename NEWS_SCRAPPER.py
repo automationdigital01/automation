@@ -19,19 +19,18 @@ def top_headlines():
     category = st.selectbox("Which category are you interested in?", ["business", "entertainment", "general", "health", "science", "technology"])
     keyword = st.text_input("Enter keyword")
     if st.button('Search'):
-        
      news=newsapi.get_everything(q=keyword,
                                 from_param=start_date,
                                 to=end_date,
                                 language='en',
-                                sory_by='relevance')
+                                sory_by='relevancy')
       
     else:
      news= newsapi.get_top_headlines(category=category,
-                                       country=country,
-                                       from_param=start_date,
-                                       to=end_date,
-                                       language='en')
+                                     country=country,
+                                     from_param=start_date,
+                                     to=end_date,
+                                     language='en')
                                        
    
         
