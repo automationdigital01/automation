@@ -30,7 +30,7 @@ def top_headlines():
      news= newsapi.get_top_headlines(category=category,
                                        country=country,
                                        from_param=start_date,
-                                       to=end_date
+                                       to=end_date,
                                        language='en')
                                        
    
