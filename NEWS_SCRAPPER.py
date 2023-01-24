@@ -23,7 +23,6 @@ def top_headlines():
                                       from_param=start_date,
                                       to=end_date,
                                       language='en',
-                                      category=category,
                                       country=country,
                                       sort_by='relevancy')
    
