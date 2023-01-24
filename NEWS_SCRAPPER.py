@@ -21,7 +21,7 @@ def top_headlines():
     if st.button('Search'):
         
      news=newsapi.get_everything(q=keyword,
-                                from_date=start_date,
+                                from_param=start_date,
                                 to=end_date,
                                 language='en',
                                 sory_by='relevance')
